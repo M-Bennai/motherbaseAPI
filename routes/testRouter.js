@@ -8,7 +8,7 @@ const {
 
 testRouter.post(
   "/create",
-  /*validateToken,*/ async (req, res) => {
+  /*vvalidateToken,*/ async (req, res) => {
     console.log("req.body :>> ", req.body);
     const {
       testTitle,
