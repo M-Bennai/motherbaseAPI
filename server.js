@@ -5,7 +5,10 @@ const port = process.env.PORT || 1000;
 const logger = require("morgan");
 const cors = require("cors");
 
-const allowedOrigins = ["http://localhost:7000"];
+const allowedOrigins = [
+  "http://localhost:1000",
+  "https://motherbase.herokuapp.com/",
+];
 
 app.use(express.json());
 
