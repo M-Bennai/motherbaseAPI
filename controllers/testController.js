@@ -54,7 +54,7 @@ const TestController = {
   getOneTest: async (id) => {
     const test = await Test.findOne({
       where: { id: id },
-      include: [{ model: User, as: "user" }],
+      //include: [{ model: User, as: "user" }],
     });
     return test;
   },
