@@ -1,51 +1,77 @@
 "use strict";
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Users", {
+    await queryInterface.createTable("Tests", {
       id: {
         allowNull: false,
         primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
         type: Sequelize.UUID,
       },
-      nickname: {
+      testTitle: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      sndTitle: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      gameImg: {
         type: Sequelize.STRING,
       },
-      email: {
+      platform: {
         type: Sequelize.STRING,
       },
-      password: {
+      date: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      title1: {
         type: Sequelize.STRING,
       },
-      image: {
+      block1: {
+        type: Sequelize.STRING(2000),
+      },
+      title2: {
         type: Sequelize.STRING,
       },
-      favoriteGame: {
+      block2: {
+        type: Sequelize.STRING(2000),
+      },
+      title3: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      block3: {
+        type: Sequelize.STRING(2000),
+        allowNull: true,
+      },
+      image1: {
         type: Sequelize.STRING,
       },
-      role: {
+      image2: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
-      discord: {
+      image3: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
-      psnId: {
+      video: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
-      xboxId: {
-        type: Sequelize.STRING,
-      },
-      nintendoId: {
-        type: Sequelize.STRING,
-      },
-      steamId: {
-        type: Sequelize.STRING,
-      },
-      description: {
-        type: Sequelize.STRING,
-      },
-      comments: {
+      rating: {
         type: Sequelize.INTEGER,
+      },
+      strongPoints: {
+        type: Sequelize.STRING,
+      },
+      weakPoints: {
+        type: Sequelize.STRING,
+      },
+      conclusion: {
+        type: Sequelize.STRING(2000),
       },
       createdAt: {
         allowNull: false,
@@ -58,6 +84,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Users");
+    await queryInterface.dropTable("Tests");
   },
 };

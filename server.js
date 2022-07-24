@@ -1,13 +1,14 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 1000;
 const logger = require("morgan");
 const cors = require("cors");
 
-const allowedOrigins = ["http://localhost:5000"];
+const allowedOrigins = ["http://localhost:7000"];
 
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: false }));
 app.use(cors(allowedOrigins));
 app.use(logger("dev"));
