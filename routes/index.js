@@ -3,6 +3,6 @@ const router = express.Router();
 
 router.use("/user", require("./userRouter"));
 router.use("/test", require("./testRouter"));
-//router.use("/news", require("./newsRouter"));
+//router.use("/news", require("./newsRouter"));a
 
 module.exports = router;
