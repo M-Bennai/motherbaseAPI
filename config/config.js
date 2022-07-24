@@ -21,6 +21,12 @@ module.exports = {
     database: process.env.DATABASE_PRODUCTION_NAME,
     host: process.env.DB_HOST_PROD,
     dialect: "postgres",
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   },
   // gcpConnectLocal: {
   //   username: "postgres",

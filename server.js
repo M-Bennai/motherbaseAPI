@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 app.use("/api", require("./routes/index"));
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`listenning on port ${port}`);
 });
 
